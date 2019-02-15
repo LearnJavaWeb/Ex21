@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head"></head>
+<body>
+<h3>Information Product</h3>
+<a th:href="@{/list}">
+    Back to product list
+</a>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${productMap.getNameProduct()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Price Product:</label>
+        <label th:text="${productMap.getPrice()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Description Product:</label>
+        <label th:text="${productMap.getDescription()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Made In:</label>
+        <label th:text="${productMap.getMade()}"></label>
+    </div>
+</div>
+<footer th:replace="layout::footer"></footer>
+</body>
+</html>
